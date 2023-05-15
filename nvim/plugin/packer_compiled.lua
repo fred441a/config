@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/fred441a/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
+  ["ctrlp.vim"] = {
+    loaded = true,
+    path = "/home/fred441a/.local/share/nvim/site/pack/packer/start/ctrlp.vim",
+    url = "https://github.com/kien/ctrlp.vim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/fred441a/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -88,6 +93,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/fred441a/.local/share/nvim/site/pack/packer/start/vim-be-good",
     url = "https://github.com/thePrimeagen/vim-be-good"
+  },
+  ["vim-colors-xcode"] = {
+    loaded = true,
+    path = "/home/fred441a/.local/share/nvim/site/pack/packer/start/vim-colors-xcode",
+    url = "https://github.com/arzg/vim-colors-xcode"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/home/fred441a/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 

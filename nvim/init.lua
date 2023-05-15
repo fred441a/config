@@ -9,10 +9,14 @@ inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 ]])
+local keyset = vim.keymap.set
+
+keyset("n","<C-s>",":w<CR>")
+keyset("i","<C-s>","<Esc>:w<CR>i<right>")
+keyset({"n","i"},"<A-i>", "<plug>(coc-format)" )
 
 -- Coc configs
 
-local keyset = vim.keymap.set
 -- Autocomplete
 function _G.check_back_space()
     local col = vim.fn.col('.') - 1
@@ -62,3 +66,28 @@ return require('packer').startup(function(use)
     require('packer').sync()
   end
 end)
+
+--[[
+<BS>           Backspace
+<Tab>          Tab
+<CR>           Enter
+<Enter>        Enter
+<Return>       Enter
+<Esc>          Escape
+<Space>        Space
+<Up>           Up arrow
+<Down>         Down arrow
+<Left>         Left arrow
+<Right>        Right arrow
+<F1> - <F12>   Function keys 1 to 12
+#1, #2..#9,#0  Function keys F1 to F9, F10
+<Insert>       Insert
+<Del>          Delete
+<Home>         Home
+<End>          End
+<PageUp>       Page-Up
+<PageDown>     Page-Down
+<bar>          the '|' character, which otherwise needs to be escaped '\|'
+--]]
+
+
