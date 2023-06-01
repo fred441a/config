@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/fred441a/.local/share/nvim/site/pack/packer/start/ctrlp.vim",
     url = "https://github.com/kien/ctrlp.vim"
   },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/fred441a/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/fred441a/.local/share/nvim/site/pack/packer/start/packer.nvim",
