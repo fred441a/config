@@ -32,23 +32,7 @@ end
 local opts = { silent = true, noremap = true, expr = true, replace_keycodes = false }
 keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
 keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
--- colorizer
 
-require 'colorizer'.setup(
-	{ "*" },
-	{
-		RGB      = true, -- #RGB hex codes
-		RRGGBB   = true, -- #RRGGBB hex codes
-		names    = true, -- "Name" codes like Blue
-		RRGGBBAA = true, -- #RRGGBBAA hex codes
-		rgb_fn   = true, -- CSS rgb() and rgba() functions
-		hsl_fn   = true, -- CSS hsl() and hsla() functions
-		css      = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-		css_fn   = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
-		-- Available modes: foreground, background
-		mode     = 'background', -- Set the display mode.
-	}
-);
 
 
 -- packer
@@ -66,7 +50,7 @@ end
 
 local packer_bootstrap = ensure_packer()
 
-return require('packer').startup(function(use)
+ require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	-- autocomplete and LSP
 	use { 'neoclide/coc.nvim', branch = 'release' }
@@ -87,6 +71,24 @@ return require('packer').startup(function(use)
 		require('packer').sync()
 	end
 end)
+
+-- colorizer
+
+require 'colorizer'.setup(
+	{ "*" },
+	{
+		RGB      = true, -- #RGB hex codes
+		RRGGBB   = true, -- #RRGGBB hex codes
+		names    = true, -- "Name" codes like Blue
+		RRGGBBAA = true, -- #RRGGBBAA hex codes
+		rgb_fn   = true, -- CSS rgb() and rgba() functions
+		hsl_fn   = true, -- CSS hsl() and hsla() functions
+		css      = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+		css_fn   = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+		-- Available modes: foreground, background
+		mode     = 'background', -- Set the display mode.
+	}
+);
 
 --[[
 <BS>           Backspace
