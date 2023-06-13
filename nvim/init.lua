@@ -80,6 +80,8 @@ return require('packer').startup(function(use)
 	use 'kien/ctrlp.vim'
 	-- colorizer
 	use 'norcalli/nvim-colorizer.lua'
+	-- emmet
+	use 'mattn/emmet-vim'
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
