@@ -1,0 +1,10 @@
+/*
+!.gitignore
+!RunAsRoot.sh
+!i3/
+!polybar/
+!nvim/
+!Images/
+!picom.conf
+!rofi/
+!alacritty/
